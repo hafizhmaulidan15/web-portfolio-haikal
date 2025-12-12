@@ -1,0 +1,223 @@
+/* ===== EXPERIENCE SECTION ===== */
+.experience {
+    background: var(--cyber-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+.experience::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(255, 0, 255, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Timeline */
+.experience-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom,
+            transparent,
+            var(--neon-cyan) 10%,
+            var(--neon-magenta) 50%,
+            var(--neon-cyan) 90%,
+            transparent);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.timeline-item.left {
+    flex-direction: row;
+    padding-right: calc(50% + 40px);
+}
+
+.timeline-item.right {
+    flex-direction: row-reverse;
+    padding-left: calc(50% + 40px);
+}
+
+/* Timeline Node */
+.timeline-node {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.node-outer {
+    width: 24px;
+    height: 24px;
+    background: var(--cyber-dark);
+    border: 2px solid var(--accent-color, var(--neon-cyan));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px var(--accent-color, var(--neon-cyan));
+}
+
+.node-inner {
+    width: 10px;
+    height: 10px;
+    background: var(--accent-color, var(--neon-cyan));
+    border-radius: 50%;
+    animation: nodePulse 2s infinite;
+}
+
+@keyframes nodePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.8);
+        opacity: 0.6;
+    }
+}
+
+/* Timeline Content */
+.timeline-content {
+    flex: 1;
+    position: relative;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 30px;
+    height: 2px;
+    background: var(--accent-color, var(--neon-cyan));
+}
+
+.timeline-item.left .timeline-content::before {
+    right: -30px;
+}
+
+.timeline-item.right .timeline-content::before {
+    left: -30px;
+}
+
+.exp-type-badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border: 1px solid;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.exp-title {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.exp-company,
+.exp-period {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.company-icon,
+.period-icon {
+    font-size: 1rem;
+}
+
+.exp-company {
+    color: var(--neon-cyan);
+}
+
+.exp-period {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.exp-description {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-top: 15px;
+}
+
+/* Decoration */
+.exp-decoration {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.deco-line {
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-color, var(--neon-cyan)));
+}
+
+.deco-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--accent-color, var(--neon-cyan));
+    animation: nodePulse 2s infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 20px;
+    }
+
+    .timeline-item,
+    .timeline-item.left,
+    .timeline-item.right {
+        flex-direction: row;
+        padding-left: 60px;
+        padding-right: 0;
+    }
+
+    .timeline-node {
+        left: 20px;
+    }
+
+    .timeline-content::before {
+        left: -30px !important;
+        right: auto !important;
+    }
+}
