@@ -16,9 +16,11 @@ const About = () => {
                             <div className="frame-corner bottom-left"></div>
                             <div className="frame-corner bottom-right"></div>
                             <div className="profile-image">
-                                <div className="profile-placeholder">
-                                    <span className="initials">MHR</span>
-                                </div>
+                                <img
+                                    src="/profile-haikal.jpg"
+                                    alt={profileData.name}
+                                    className="profile-photo"
+                                />
                                 <div className="profile-scan-line"></div>
                             </div>
                         </div>
