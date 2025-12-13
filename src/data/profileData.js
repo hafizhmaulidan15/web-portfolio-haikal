@@ -4,8 +4,8 @@ export const profileData = {
   name: "Muhammad Haikal Ramadhika",
   title: "Network Engineer",
   tagline: "Connecting the Future • One Network at a Time",
-  email: "mhaikramadhika7@gmail.com",
-  phone: "+62 877-8968-0251",
+  email: "mhaikramadhika5@gmail.com",
+  phone: "+62 877-8968-0231",
   location: "Bogor, Indonesia",
   linkedin: "https://linkedin.com/in/muhammad-haikal-ramadhika-5749b22a6",
   github: "https://github.com/haikal-ramadhika",
@@ -31,7 +31,7 @@ export const experiences = [
   {
     id: 1,
     title: "NOC & Network Security Intern",
-    company: "PT Takia Ersada Solusindo",
+    company: "PT Yaksa Ersada Solusindo",
     period: "July 2025 – Present",
     description: "Monitored network operations, handled incidents, and supported security tasks.",
     type: "internship"
@@ -47,7 +47,7 @@ export const experiences = [
   {
     id: 3,
     title: "CCNA Trainer",
-    company: "ICV Ipoh, Malaysia",
+    company: "KV Ipoh, Malaysia",
     period: "November 2024",
     description: "Delivered CCNA training and lab guidance to overseas students.",
     type: "trainer"
@@ -55,7 +55,7 @@ export const experiences = [
   {
     id: 4,
     title: "CCNA Trainer",
-    company: "SMA Citra Kasih 2, Jakarta",
+    company: "SMA Gita Kirtti 2, Jakarta",
     period: "November 2024",
     description: "Taught basic routing & switching, guided lab sessions.",
     type: "trainer"
@@ -71,7 +71,7 @@ export const experiences = [
   {
     id: 6,
     title: "CCNA Trainer",
-    company: "Al-Azhar Boarding School, Bogor",
+    company: "Al-Ashr Boarding School, Bogor",
     period: "May 2024",
     description: "Delivered CCNA training and lab guidance to students.",
     type: "trainer"
@@ -79,7 +79,7 @@ export const experiences = [
   {
     id: 7,
     title: "International Competition Participant",
-    company: "APIC NetAcad Riders 2024",
+    company: "APJC NetAcad Riders 2024",
     period: "April 2024",
     description: "Participated in an international Cisco networking competition.",
     type: "competition"
@@ -138,14 +138,14 @@ export const achievements = [
   {
     id: 1,
     title: "2nd Place - National Computer Network Competition",
-    event: "PSNB IT Competition #16 X ECO",
+    event: "PNB IT Competition #16 X ECO",
     date: "October 2024",
     icon: "🥈"
   },
   {
     id: 2,
     title: "1st Place - English Competition",
-    event: "IOSPI 2024",
+    event: "OSPN 2024",
     date: "June 2024",
     icon: "🥇"
   },

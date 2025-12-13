@@ -179,7 +179,7 @@ Edit `src/data/profileData.js` to update:
 
 ## 🤝 Contact
 
-- **Email**: mhaikramadhika7@gmail.com
+- **Email**: mhaikramadhika5@gmail.com
 - **LinkedIn**: [Muhammad Haikal Ramadhika](https://linkedin.com/in/muhammad-haikal-ramadhika-5749b22a6)
 - **Location**: Bogor, Indonesia
 
