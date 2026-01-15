@@ -166,29 +166,40 @@ export const achievements = [
 ];
 
 export const skills = {
-  networking: [
-    { name: "Cisco CCNA", level: 95 },
-    { name: "Routing/Switching", level: 90 },
-    { name: "IPv6", level: 85 },
-    { name: "Access List", level: 88 },
-    { name: "FHRP", level: 80 },
-    { name: "DHCP/NAT", level: 92 }
+  "Cisco (CCNA)": [
+    "Routing",
+    "Switching",
+    "IPv4",
+    "IPv6",
+    "VLAN",
+    "Access List",
+    "FHRP",
+    "DHCP",
+    "NAT"
   ],
-  mikrotik: [
-    { name: "MTCNA", level: 90 },
-    { name: "MTCRE", level: 88 },
-    { name: "Routing & VLAN", level: 85 },
-    { name: "Firewall", level: 82 },
-    { name: "VPN & Tunneling", level: 80 },
-    { name: "QoS", level: 78 }
+  "MikroTik (MTCNA, MTCRE)": [
+    "Routing",
+    "Switching",
+    "VLAN",
+    "Firewall",
+    "VPN",
+    "Tunneling",
+    "QoS",
+    "DHCP",
+    "NAT"
   ],
-  tools: [
+  "Fortinet (FortiGate)": [
+    "FortiGate",
+    "Firewall",
+    "NAT",
+    "DHCP",
+    "HA"
+  ],
+  "Tools & Technologies": [
     "PNET Lab",
     "Cisco Packet Tracer",
     "VMWare",
-    "Telnet & SSH",
-    "FortiGate",
-    "FortiProxy"
+    "Telnet & SSH"
   ],
   design: ["Canva", "Figma"],
   softSkills: [
