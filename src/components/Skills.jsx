@@ -2,78 +2,55 @@ import { skills } from '../data/profileData';
 import './Skills.css';
 
 const Skills = () => {
+    // Get vendor-based skills and other categories
+    const vendorSkills = Object.entries(skills).filter(([key]) => 
+        !['design', 'softSkills', 'languages'].includes(key)
+    );
+
+    // Icon mapping for vendors
+    const iconMap = {
+        'Cisco (CCNA)': '🌐',
+        'MikroTik (MTCNA, MTCRE)': '📡',
+        'Fortinet (FortiGate)': '🔥',
+        'Tools & Technologies': '🔧'
+    };
+
     return (
         <section id="skills" className="section skills">
             <div className="container">
                 <h2 className="section-title">Skills & Expertise</h2>
 
                 <div className="skills-grid">
-                    {/* Networking Skills */}
-                    <div className="skill-category">
-                        <div className="category-header">
-                            <span className="category-icon">🌐</span>
-                            <h3 className="category-title">Networking & Cisco</h3>
-                        </div>
-                        <div className="skill-bars">
-                            {skills.networking.map((skill, index) => (
-                                <div key={index} className="skill-bar-item">
-                                    <div className="skill-info">
-                                        <span className="skill-name">{skill.name}</span>
-                                        <span className="skill-level">{skill.level}%</span>
+                    {/* Vendor-based Skills (Cisco, MikroTik, Fortinet, Tools) */}
+                    {vendorSkills.map(([vendor, skillList], catIndex) => (
+                        <div key={catIndex} className="skill-category">
+                            <div className="category-header">
+                                <span className="category-icon">{iconMap[vendor] || '⚡'}</span>
+                                <h3 className="category-title">{vendor}</h3>
+                            </div>
+                            <div className="skill-list">
+                                {skillList.map((skill, index) => (
+                                    <div 
+                                        key={index} 
+                                        className="skill-item" 
+                                        style={{ '--delay': `${index * 0.05}s` }}
+                                    >
+                                        <span className="skill-bullet">▹</span>
+                                        <span className="skill-name">{skill}</span>
                                     </div>
-                                    <div className="skill-bar">
-                                        <div
-                                            className="skill-progress"
-                                            style={{
-                                                '--progress': `${skill.level}%`,
-                                                '--delay': `${index * 0.1}s`
-                                            }}
-                                        >
-                                            <div className="progress-glow"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
-                    </div>
+                    ))}
 
-                    {/* MikroTik Skills */}
-                    <div className="skill-category">
-                        <div className="category-header">
-                            <span className="category-icon">📡</span>
-                            <h3 className="category-title">MikroTik</h3>
-                        </div>
-                        <div className="skill-bars">
-                            {skills.mikrotik.map((skill, index) => (
-                                <div key={index} className="skill-bar-item">
-                                    <div className="skill-info">
-                                        <span className="skill-name">{skill.name}</span>
-                                        <span className="skill-level">{skill.level}%</span>
-                                    </div>
-                                    <div className="skill-bar">
-                                        <div
-                                            className="skill-progress magenta"
-                                            style={{
-                                                '--progress': `${skill.level}%`,
-                                                '--delay': `${index * 0.1}s`
-                                            }}
-                                        >
-                                            <div className="progress-glow"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* Tools */}
+                    {/* Design Tools */}
                     <div className="skill-category tools-category">
                         <div className="category-header">
-                            <span className="category-icon">🔧</span>
-                            <h3 className="category-title">Tools & Technologies</h3>
+                            <span className="category-icon">🎨</span>
+                            <h3 className="category-title">Design</h3>
                         </div>
                         <div className="tools-grid">
-                            {skills.tools.map((tool, index) => (
+                            {skills.design.map((tool, index) => (
                                 <div key={index} className="tool-chip" style={{ '--delay': `${index * 0.1}s` }}>
                                     <span className="tool-indicator"></span>
                                     <span className="tool-name">{tool}</span>
