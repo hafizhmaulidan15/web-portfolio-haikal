@@ -217,6 +217,7 @@ export const skills = {
 };
 
 export const certifications = [
+  /*
   {
     id: 1,
     name: "Fortinet NSE 6 - FortiProxy",
@@ -225,6 +226,7 @@ export const certifications = [
     color: "#ff2a6d",
     description: "Specialized in deploying and managing FortiProxy secure web gateway solutions. Expertise in web filtering, SSL inspection, explicit/transparent proxy modes, authentication policies, and caching optimization for enterprise networks."
   },
+  */
   {
     id: 2,
     name: "Fortinet Certified Associate in Cybersecurity (FCA)",
