@@ -1,0 +1,115 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        background: '#05050A',
+        surface: '#0A0A18',
+        'surface-hover': '#12122A',
+        foreground: '#FFFFFF',
+        'text-secondary': '#C0C0D0',
+        'text-tertiary': '#8080A0',
+        'text-muted': '#606080',
+        primary: '#00D4FF',
+        'primary-hover': '#00B8E6',
+        'primary-active': '#0099CC',
+        accent: {
+          green: '#00FF88',
+          purple: '#7C3AED',
+          amber: '#FFB800',
+          pink: '#FF2D95',
+          red: '#FF4444',
+          cyan: '#22D3EE',
+        },
+        success: '#00FF88',
+        warning: '#FFB800',
+        error: '#FF4444',
+        interactive: {
+          button: 'rgba(255, 255, 255, 0.04)',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        mono: ['JetBrains Mono', 'Fira Code', 'Monaco', 'monospace'],
+        display: ['JetBrains Mono', 'monospace'],
+      },
+      fontSize: {
+        'display': ['36px', { lineHeight: '44px', letterSpacing: '-1px', fontWeight: '700' }],
+        'h1': ['28px', { lineHeight: '36px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'h2': ['22px', { lineHeight: '30px', letterSpacing: '0px', fontWeight: '600' }],
+        'h3': ['18px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '600' }],
+        'h4': ['16px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '600' }],
+        'body-lg': ['15px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'body': ['13px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '500' }],
+        'body-sm': ['11px', { lineHeight: '16px', letterSpacing: '0px', fontWeight: '500' }],
+        'caption': ['11px', { lineHeight: '16px', letterSpacing: '0px', fontWeight: '400' }],
+        'overline': ['9px', { lineHeight: '14px', letterSpacing: '0.8px', fontWeight: '400' }],
+        'code': ['12px', { lineHeight: '16px', letterSpacing: '0px', fontWeight: '400' }],
+      },
+      borderRadius: {
+        'sm': '6px',
+        'DEFAULT': '10px',
+        'md': '14px',
+        'lg': '20px',
+        'xl': '24px',
+        'full': '999px',
+      },
+      maxWidth: {
+        'container': '1400px',
+        'content': '1200px',
+      },
+      boxShadow: {
+        'raised': 'rgba(0, 0, 0, 0.05) 0px 1px 2px 0px',
+        'floating': 'rgba(0, 0, 0, 0.1) 0px 2px 4px 0px',
+        'lifted': 'rgba(0, 0, 0, 0.15) 0px 4px 8px 0px',
+        'inset': 'rgba(0, 212, 255, 0.08) 0px -10px 50px -10px inset',
+        'inset-hover': 'rgba(0, 212, 255, 0.12) 0px -10px 50px -10px inset',
+        'pill': 'rgba(0, 212, 255, 0.08) 0px -10px 50px -10px inset',
+        'primary-btn': 'rgba(0, 212, 255, 0.15) 0px 0px 20px',
+        'primary-btn-hover': 'rgba(0, 212, 255, 0.25) 0px 0px 30px',
+        'primary-btn-active': 'rgba(0, 212, 255, 0.1) 0px 0px 10px',
+        'focus': '0px 0px 0px 3px rgba(0, 212, 255, 0.15)',
+        'neon': '0 0 20px rgba(0, 212, 255, 0.3), 0 0 40px rgba(0, 212, 255, 0.1)',
+        'neon-green': '0 0 20px rgba(0, 255, 136, 0.3), 0 0 40px rgba(0, 255, 136, 0.1)',
+      },
+      animation: {
+        'shimmer': 'shimmer 2s linear infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
+        'scanline': 'scanline 8s linear infinite',
+        'typing': 'typing 3.5s steps(40, end)',
+        'blink': 'blink 1s step-end infinite',
+      },
+      keyframes: {
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        'pulse-glow': {
+          '0%, 100%': { opacity: '0.4' },
+          '50%': { opacity: '1' },
+        },
+        scanline: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(100vh)' },
+        },
+        typing: {
+          'from': { width: '0' },
+          'to': { width: '100%' },
+        },
+        blink: {
+          '50%': { borderColor: 'transparent' },
+        },
+      },
+    },
+  },
+  plugins: [],
+}

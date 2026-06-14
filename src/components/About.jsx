@@ -1,91 +1,175 @@
-import { profileData, education } from '../data/profileData';
-import './About.css';
+import { motion as m } from 'framer-motion';
+import { Briefcase, GraduationCap, MapPin, Calendar, Network, BookOpen, TerminalWindow, WifiHigh, Certificate, Globe } from '@phosphor-icons/react';
+import { profileData, achievements } from '../data/profileData';
+
+const MotionDiv = m.div;
 
 const About = () => {
-    return (
-        <section id="about" className="section about">
-            <div className="container">
-                <h2 className="section-title">About Me</h2>
+    const systemInfo = [
+        { label: 'Name', value: 'Muhammad Haikal Ramadhika' },
+        { label: 'Role', value: 'NOC & Network Security' },
+        { label: 'Location', value: 'Bogor, Indonesia' },
+        { label: 'Email', value: profileData.email },
+        { label: 'Education', value: 'SMK IDN Boarding School — TKJ' },
+        { label: 'Status', value: 'Active · Open to opportunities' },
+    ];
 
-                <div className="about-grid">
-                    {/* Profile Card */}
-                    <div className="about-profile">
-                        <div className="profile-frame">
-                            <div className="frame-corner top-left"></div>
-                            <div className="frame-corner top-right"></div>
-                            <div className="frame-corner bottom-left"></div>
-                            <div className="frame-corner bottom-right"></div>
-                            <div className="profile-image">
-                                <img
-                                    src="/profile-haikal.jpg"
-                                    alt={profileData.name}
-                                    className="profile-photo"
-                                />
-                                <div className="profile-scan-line"></div>
+    return (
+        <section className="py-16 px-6 min-h-screen bg-background relative overflow-hidden">
+            <div className="absolute inset-0 pointer-events-none">
+                <div className="absolute top-1/3 -left-40 w-96 h-96 bg-accent-purple/5 blur-[120px] rounded-full"></div>
+                <div className="absolute bottom-1/3 -right-40 w-96 h-96 bg-primary/5 blur-[120px] rounded-full"></div>
+            </div>
+
+            <div className="container mx-auto max-w-[1200px] relative z-10">
+                <MotionDiv
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="inline-flex items-center gap-3 px-4 py-2 rounded-lg border border-primary/15 bg-primary/5 font-mono text-xs mb-8"
+                >
+                    <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse"></span>
+                    <span className="text-accent-green">~/$</span>
+                    <span className="text-text-tertiary">cat ./about.md</span>
+                </MotionDiv>
+
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+                    {/* Profile Photo + System Info */}
+                    <div className="lg:col-span-2 space-y-4">
+                        {/* Profile Photo */}
+                        <MotionDiv
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.6 }}
+                            className="rounded-xl border border-white/[0.08] bg-surface/60 backdrop-blur-sm overflow-hidden"
+                        >
+                            <div className="flex items-center gap-4 p-4">
+                                <div className="relative shrink-0">
+                                    <img
+                                        src="/profile-haikal.jpg"
+                                        alt="Muhammad Haikal Ramadhika"
+                                        className="w-20 h-20 md:w-24 md:h-24 rounded-xl object-cover border-2 border-primary/30"
+                                    />
+                                    <div className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-accent-green border-2 border-background"></div>
+                                </div>
+                                <div className="min-w-0">
+                                    <div className="text-foreground font-semibold text-sm">Muhammad Haikal Ramadhika</div>
+                                    <div className="text-[10px] font-mono text-text-tertiary mt-0.5 flex items-center gap-1">
+                                        <TerminalWindow size={10} weight="bold" className="text-primary" />
+                                        Network Engineer
+                                    </div>
+                                    <div className="flex items-center gap-1.5 mt-2">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-accent-green animate-pulse"></span>
+                                        <span className="text-[9px] font-mono text-text-muted">online</span>
+                                        <span className="w-0.5 h-0.5 rounded-full bg-text-muted"></span>
+                                        <span className="text-[9px] font-mono text-text-muted">NOC Active</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div className="profile-info">
-                            <h3 className="profile-name">{profileData.name}</h3>
-                            <p className="profile-title">{profileData.title}</p>
-                            <div className="profile-location">
-                                <span className="location-icon">📍</span>
-                                <span>{profileData.location}</span>
+                        </MotionDiv>
+
+                        {/* System Info Panel */}
+                        <MotionDiv
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6 }}
+                            className="rounded-xl border border-white/[0.08] bg-surface/60 backdrop-blur-sm overflow-hidden"
+                        >
+                            <div className="px-4 py-3 border-b border-white/[0.06] bg-black/20 flex items-center gap-2">
+                                <TerminalWindow size={14} weight="bold" className="text-primary" />
+                                <span className="text-[10px] font-mono text-text-tertiary uppercase tracking-wider">System Information</span>
                             </div>
-                        </div>
+                            <div className="p-4 space-y-0 font-mono text-xs">
+                                {systemInfo.map((info, idx) => (
+                                    <div key={idx} className="flex items-start gap-3 py-2.5 border-b border-white/[0.04] last:border-0">
+                                        <span className="text-text-tertiary w-20 shrink-0">{info.label}:</span>
+                                        <span className={
+                                            idx === 0 ? 'text-foreground font-semibold' :
+                                            idx === 3 ? 'text-accent-green' :
+                                            idx === 5 ? 'text-accent-green' :
+                                            'text-text-secondary'
+                                        }>{info.value}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </MotionDiv>
+
+                        <MotionDiv
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                            className="rounded-xl border border-white/[0.08] bg-surface/60 backdrop-blur-sm overflow-hidden"
+                        >
+                            <div className="px-4 py-3 border-b border-white/[0.06] bg-black/20 flex items-center gap-2">
+                                <Certificate size={14} weight="bold" className="text-accent-purple" />
+                                <span className="text-[10px] font-mono text-text-tertiary uppercase tracking-wider">Achievements</span>
+                            </div>
+                            <div className="p-4 space-y-2">
+                                {achievements.map((ach, idx) => (
+                                    <div key={idx} className="flex items-center gap-3 px-3 py-2 rounded-lg border border-white/[0.04] bg-black/20">
+                                        <span className={ach.color}>
+                                            {ach.icon === 'network' ? <Network size={14} weight="duotone" /> :
+                                             ach.icon === 'router' ? <Globe size={14} weight="duotone" /> :
+                                             ach.icon === 'book' ? <BookOpen size={14} weight="duotone" /> :
+                                             <Certificate size={14} weight="duotone" />}
+                                        </span>
+                                        <span className="text-xs font-mono text-text-secondary">{ach.text}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </MotionDiv>
                     </div>
 
-                    {/* About Content */}
-                    <div className="about-content">
-                        <div className="terminal-window">
-                            <div className="terminal-header">
-                                <div className="terminal-buttons">
-                                    <span className="btn-red"></span>
-                                    <span className="btn-yellow"></span>
-                                    <span className="btn-green"></span>
-                                </div>
-                                <span className="terminal-title">haikal@portfolio:~</span>
-                            </div>
-                            <div className="terminal-body">
-                                <p className="terminal-command">
-                                    <span className="prompt">$</span> cat about.txt
-                                </p>
-                                <p className="terminal-output">{profileData.about}</p>
-                                <p className="terminal-command">
-                                    <span className="prompt">$</span> <span className="cursor-blink">_</span>
-                                </p>
-                            </div>
-                        </div>
+                    {/* Bio Section */}
+                    <div className="lg:col-span-3 space-y-6">
+                        <MotionDiv
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.1 }}
+                        >
+                            <h1 className="text-[28px] md:text-[36px] font-bold tracking-tighter leading-[1.1] mb-2">
+                                About{' '}
+                                <span className="text-gradient-cyan">Me</span>
+                            </h1>
+                            <div className="h-0.5 w-16 bg-gradient-to-r from-primary to-accent-purple rounded-full mb-6"></div>
 
-                        {/* Education */}
-                        <div className="education-section">
-                            <h3 className="subsection-title">
-                                <span className="title-icon">🎓</span>
-                                Education
-                            </h3>
-                            {education.map((edu) => (
-                                <div key={edu.id} className="education-card cyber-card">
-                                    <div className="edu-header">
-                                        <h4 className="edu-institution">{edu.institution}</h4>
-                                        <span className="edu-period">{edu.period}</span>
+                            <div className="space-y-4 text-text-secondary text-sm md:text-base leading-relaxed">
+                                <p className="font-mono text-text-tertiary text-xs border-l-2 border-primary/30 pl-3 italic">
+                                    "Connecting the Future &mdash; One Network at a Time"
+                                </p>
+                                <p>{profileData.about}</p>
+                                <p>
+                                    Currently serving as <span className="text-foreground font-medium">NOC & Network Security at PT Yaksa Ersada Solusindo</span>,
+                                    I monitor network operations and support information security tasks. My journey includes training 70+ students
+                                    across Indonesia and Malaysia, authoring 5 technical books on networking, and earning multiple industry
+                                    certifications from Cisco, MikroTik, and Fortinet.
+                                </p>
+                            </div>
+                        </MotionDiv>
+
+                        <MotionDiv
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.3 }}
+                            className="grid grid-cols-2 gap-3"
+                        >
+                            {[
+                                { icon: Briefcase, label: 'Current Role', value: 'NOC & Network Security', color: 'text-primary' },
+                                { icon: GraduationCap, label: 'Education', value: 'SMK IDN Boarding School', color: 'text-accent-purple' },
+                                { icon: Network, label: 'Specialization', value: 'Cisco & MikroTik', color: 'text-accent-green' },
+                                { icon: WifiHigh, label: 'Students Trained', value: '70+', color: 'text-accent-amber' },
+                            ].map((item, idx) => (
+                                <div key={idx} className="p-4 rounded-xl border border-white/[0.06] bg-surface/40 backdrop-blur-sm">
+                                    <div className={`${item.color} mb-2`}>
+                                        <item.icon size={18} weight="duotone" />
                                     </div>
-                                    <p className="edu-degree">{edu.degree}</p>
-                                    <p className="edu-description">{edu.description}</p>
+                                    <div className="text-[10px] font-mono text-text-tertiary uppercase tracking-wider">{item.label}</div>
+                                    <div className="text-sm font-medium text-foreground mt-0.5">{item.value}</div>
                                 </div>
                             ))}
-                        </div>
-
-                        {/* Quick Contact */}
-                        <div className="quick-contact">
-                            <a href={`mailto:${profileData.email}`} className="contact-chip">
-                                <span className="chip-icon">📧</span>
-                                <span>{profileData.email}</span>
-                            </a>
-                            <a href={profileData.linkedin} target="_blank" rel="noopener noreferrer" className="contact-chip">
-                                <span className="chip-icon">💼</span>
-                                <span>LinkedIn</span>
-                            </a>
-                        </div>
+                        </MotionDiv>
                     </div>
+
                 </div>
             </div>
         </section>

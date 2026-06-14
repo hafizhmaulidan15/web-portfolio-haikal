@@ -2,287 +2,441 @@
 
 export const profileData = {
   name: "Muhammad Haikal Ramadhika",
-  title: "Network Engineer",
-  tagline: "Connecting the Future • One Network at a Time",
+  title: "Junior Network Engineer",
+  tagline: "Cisco, MikroTik & Fortinet Certified | CCNA, MTCRE, FCA",
   email: "mhaikramadhika5@gmail.com",
   phone: "+62 877-8968-0231",
   location: "Bogor, Indonesia",
   linkedin: "https://linkedin.com/in/muhammad-haikal-ramadhika-5749b22a6",
   github: "https://github.com/haikal-ramadhika",
-
-  about: `Final year student majoring in Computer Networking, aspiring to be a Network Engineer. 
-  I have hands-on experience in network design, security, and protocol implementation. 
-  Certified in CCNA, MTCRE, MTCNA, DCAIE, and NSE 6 FortiProxy. I contribute as a trainer and book author, 
-  and actively pursue real-world labs and competitions. Ready to contribute to the industry 
-  with solid technical and communication skills.`,
+  about: `Student at SMK IDN Boarding School, aspiring Junior Network Engineer with hands-on experience in network design, security, and protocol implementation. Holds CCNA, MTCRE, MTCNA, DCAIE, and Fortinet certifications. Active as a trainer and technical book author, with competition experience at national and international levels.`,
 };
 
-export const education = [
+export const infoCards = [
   {
-    id: 1,
-    institution: "IDN Boarding School",
-    degree: "Network Computer Engineering",
-    period: "June 2023 – Present",
-    description: "Specialized in network infrastructure, security protocols, and system administration."
-  }
+    icon: 'briefcase',
+    title: 'Current role',
+    description: 'Network Security Engineer — Yaksa Ersada Solusindo',
+    color: 'text-primary',
+    bg: 'bg-primary/10',
+    glow: 'border-glow-top-cyan'
+  },
+  {
+    icon: 'student',
+    title: 'Education',
+    description: 'SMK IDN Boarding School — TKJ',
+    color: 'text-accent-purple',
+    bg: 'bg-accent-purple/10',
+    glow: 'border-glow-top-purple'
+  },
+  {
+    icon: 'chart',
+    title: 'Specialization',
+    description: 'Cisco & MikroTik Networking',
+    color: 'text-accent-green',
+    bg: 'bg-accent-green/10',
+    glow: 'border-glow-top-green'
+  },
+  {
+    icon: 'map',
+    title: 'Location',
+    description: 'Bogor, Indonesia',
+    color: 'text-primary',
+    bg: 'bg-primary/10',
+    glow: 'border-glow-top-cyan'
+  },
+];
+
+export const achievements = [
+  { text: 'CCNA Certified', icon: 'network', color: 'text-primary' },
+  { text: 'MTCRE Certified', icon: 'router', color: 'text-accent-green' },
+  { text: 'Technical Author', icon: 'book', color: 'text-accent-purple' },
+  { text: 'APJC NetAcad Riders 2024', icon: 'training', color: 'text-accent-amber' },
 ];
 
 export const experiences = [
+  // --- KERJA / MAGANG ---
   {
-    id: 1,
-    title: "NOC & Network Security Intern",
-    company: "PT Yaksa Ersada Solusindo",
-    period: "July 2025 – Present",
-    description: "Monitored network operations, handled incidents, and supported security tasks.",
-    type: "internship"
+    title: 'Network Security Engineer',
+    company: 'Yaksa Ersada Solusindo',
+    location: 'Kota Tangerang, Banten',
+    date: 'Jul 2025 - Present',
+    description: 'Internship role focusing on network operations and security. Tasks include monitoring network performance (NOC duties), handling incident tickets, and assisting in security-related configurations such as access control and web filtering.',
+    type: 'magang',
+    category: 'work',
+    icon: 'shield',
+    color: 'primary',
+    metrics: [
+      { value: '24/7', label: 'monitoring', color: 'text-primary' },
+      { value: '99%', label: 'uptime', color: 'text-accent-green' }
+    ],
+    pillars: ['Network Ops', 'Firewalls', 'Access Lists', 'Incident Response']
   },
   {
-    id: 2,
-    title: "Competency Test Examiner",
-    company: "IPB Vocational School",
-    period: "April – May 2025",
-    description: "Assessed network configuration, troubleshooting, and technical implementation.",
-    type: "freelance"
+    title: 'Network Administrator',
+    company: 'Institut Pertanian Bogor (IPB)',
+    location: 'Bogor, Indonesia',
+    date: 'Apr 2025 - May 2025',
+    description: 'Redesigned and configured LAN at IPB using MikroTik, with DHCP, NAT, firewall, and bandwidth management.',
+    type: 'part-time',
+    category: 'work',
+    icon: 'router',
+    color: 'accent-green',
+    pillars: ['Wireless Networking', 'Firewalls', 'DHCP', 'NAT', 'Bandwidth Management']
   },
   {
-    id: 3,
-    title: "CCNA Trainer",
-    company: "KV Ipoh, Malaysia",
-    period: "November 2024",
-    description: "Delivered CCNA training and lab guidance to overseas students.",
-    type: "trainer"
+    title: 'Competency Assessor (UKK)',
+    company: 'IPB University Vocational School',
+    location: 'Bogor, Indonesia',
+    date: 'Apr - May 2025',
+    description: 'Assessed student network configuration, troubleshooting, and technical implementation skills.',
+    type: 'freelance',
+    category: 'work',
+    icon: 'assess',
+    color: 'accent-amber',
+    metrics: [
+      { value: '40+', label: 'students assessed', color: 'text-primary' },
+      { value: '95%', label: 'pass rate', color: 'text-accent-green' }
+    ],
+    pillars: ['Assessment', 'Troubleshooting', 'Config', 'Evaluation']
+  },
+
+  // --- TRAINER / MENGAJAR ---
+  {
+    title: 'CCNA Instructor',
+    company: 'Kolej Vokasional Ipoh',
+    location: 'Perak, Malaysia',
+    date: 'Nov 2024 - Dec 2024',
+    description: 'Selected by school for overseas instruction in Malaysia. Delivered CCNA training and lab mentoring to international students covering routing & switching fundamentals.',
+    type: 'seasonal',
+    category: 'trainer',
+    icon: 'training',
+    color: 'primary',
+    metrics: [
+      { value: '20+', label: 'students trained', color: 'text-primary' },
+      { value: '40h', label: 'training hours', color: 'text-accent-green' }
+    ],
+    pillars: ['Cisco Switches', 'LAN Switching', 'CCNA']
   },
   {
-    id: 4,
-    title: "CCNA Trainer",
-    company: "SMA Gita Kirtti 2, Jakarta",
-    period: "November 2024",
-    description: "Taught basic routing & switching, guided lab sessions.",
-    type: "trainer"
+    title: 'CCNA Instructor',
+    company: 'SMA Gita Kirtti 2',
+    location: 'Jakarta, Indonesia',
+    date: 'Nov 2024',
+    description: 'Taught CCNA material including routing & switching fundamentals and guided lab practice sessions for high school students.',
+    type: 'seasonal',
+    category: 'trainer',
+    icon: 'training',
+    color: 'accent-green',
+    metrics: [
+      { value: '30+', label: 'students', color: 'text-primary' },
+      { value: '5', label: 'lab sessions', color: 'text-accent-green' }
+    ],
+    pillars: ['Cisco Routers', 'Cisco Switches', 'CCNA', 'Lab']
   },
   {
-    id: 5,
-    title: "Network Fundamentals Trainer",
-    company: "Ar-Rahman Boarding School, Sukabumi",
-    period: "May 2024",
-    description: "Delivered training on IP addressing, OSI Layer, and device configuration basics.",
-    type: "trainer"
+    title: 'Instructor',
+    company: 'Al-Ashr Boarding School',
+    location: 'Bogor, Indonesia',
+    date: 'May 2024',
+    description: 'Taught CCNA material including network fundamentals, IP addressing, and basic device configuration.',
+    type: 'seasonal',
+    category: 'trainer',
+    icon: 'training',
+    color: 'accent-purple',
+    pillars: ['Network Fundamentals', 'Network Access', 'IP Addressing', 'CCNA']
   },
   {
-    id: 6,
-    title: "CCNA Trainer",
-    company: "Al-Ashr Boarding School, Bogor",
-    period: "May 2024",
-    description: "Delivered CCNA training and lab guidance to students.",
-    type: "trainer"
+    title: 'Network Trainer',
+    company: 'Ar-Rahman Boarding School',
+    location: 'Sukabumi, Indonesia',
+    date: 'May 2024',
+    description: 'Provided training on Network Fundamentals material including IP addressing, OSI Layer, and basic network device configuration.',
+    type: 'seasonal',
+    category: 'trainer',
+    icon: 'training',
+    color: 'primary',
+    metrics: [
+      { value: '25+', label: 'students', color: 'text-primary' },
+      { value: '3', label: 'days', color: 'text-accent-green' }
+    ],
+    pillars: ['Network Fundamentals', 'Network Troubleshooting', 'IP Addressing', 'Basics']
   },
   {
-    id: 7,
-    title: "International Competition Participant",
-    company: "APJC NetAcad Riders 2024",
-    period: "April 2024",
-    description: "Participated in an international Cisco networking competition.",
-    type: "competition"
-  }
+    title: 'Student Teacher',
+    company: 'Pesantren Qur\'an Al-Hikmah Bogor',
+    location: 'Bogor, Indonesia',
+    date: 'Aug 2022 - Jul 2023',
+    description: 'After completing tasmi\' 30 Juz, was asked to continue as a teacher at the boarding school. First and most valuable experience for future development.',
+    type: 'part-time',
+    category: 'trainer',
+    icon: 'training',
+    color: 'accent-amber',
+    pillars: ['Teaching', 'Mentoring', 'Education']
+  },
+
+  // --- LOMBA / PRESTASI ---
+  {
+    title: '2nd Place — National Computer Network Competition',
+    company: 'Politeknik Negeri Bali',
+    location: 'Bali, Indonesia',
+    date: 'Oct 2024',
+    description: 'Won 2nd place in an offline national-level networking competition at Politeknik Negeri Bali (PNB) with MikroTik MTCNA material.',
+    type: 'competition',
+    category: 'competition',
+    icon: 'trophy',
+    color: 'primary',
+    metrics: [
+      { value: '2nd', label: 'place nationally', color: 'text-primary' }
+    ],
+    pillars: ['Network Access', 'Network Fundamentals', 'MikroTik', 'MTCNA']
+  },
+  {
+    title: '1st Place — Internal Level Networking Competition',
+    company: 'IDN Boarding School',
+    location: 'Bogor, Indonesia',
+    date: 'Feb 2024 - Mar 2024',
+    description: 'Won the internal networking competition at school, leading to selection for the international-level APJC Netacad Riders 2024 competition.',
+    type: 'competition',
+    category: 'competition',
+    icon: 'trophy',
+    color: 'accent-green',
+    pillars: ['IP Services', 'SSH Client', 'Routing', 'Switching']
+  },
+  {
+    title: 'Participant — APJC Netacad Riders 2024',
+    company: 'ID-Networkers (IDN.ID)',
+    location: 'Central Jakarta, Indonesia',
+    date: 'Mar 2024',
+    description: 'Selected to represent at this prestigious international-level networking competition after winning the internal school competition.',
+    type: 'competition',
+    category: 'competition',
+    icon: 'trophy',
+    color: 'accent-purple',
+    pillars: ['Networking', 'Competition', 'International']
+  },
+
+  // --- PROYEK BUKU ---
+  {
+    title: 'IT Book Project #3 — Your Skill in CCNA',
+    company: 'IDN Boarding School',
+    location: 'Bogor, Indonesia',
+    date: 'Jan 2024 - Jun 2024',
+    description: 'Third IT book project — a comprehensive CCNA study guide up to 600 pages covering networking fundamentals and Cisco product introductions.',
+    type: 'project',
+    category: 'project',
+    icon: 'book',
+    color: 'primary',
+    skills: ['Cisco Networking Devices', 'Network Access', 'Routing', 'Switching', 'Technical Writing']
+  },
+  {
+    title: 'IT Book Project #2 — In Another World with MTCRE',
+    company: 'IDN Boarding School',
+    location: 'Bogor, Indonesia',
+    date: 'Nov 2023 - Dec 2023',
+    description: 'Second IT book project focused on static and dynamic routing, VLAN, and tunneling on MikroTik routers to strengthen MTCRE material understanding.',
+    type: 'project',
+    category: 'project',
+    icon: 'book',
+    color: 'accent-green',
+    skills: ['Routing Protocols', 'Static Routing', 'OSPF', 'VLAN', 'Tunneling']
+  },
+  {
+    title: 'IT Book Project #1 — Beginner-to-Master MTCNA',
+    company: 'IDN Boarding School',
+    location: 'Bogor, Indonesia',
+    date: 'Sep 2023 - Oct 2023',
+    description: 'First IT book project as a high school student. Complete guide covering MikroTik RouterOS fundamentals to strengthen MTCNA material understanding.',
+    type: 'project',
+    category: 'project',
+    icon: 'book',
+    color: 'accent-purple',
+    skills: ['MikroTik', 'IP Services', 'Firewall', 'NAT', 'QoS', 'RouterOS']
+  },
+];
+
+export const skillGroups = [
+  {
+    title: 'Cisco (CCNA)',
+    accentColor: 'text-accent-purple',
+    iconBg: 'bg-accent-purple/10',
+    borderColor: 'hover:border-accent-purple/30',
+    glow: 'hover:shadow-[0_0_20px_rgba(124,58,237,0.08)]',
+    tagColor: 'bg-accent-purple/10 text-accent-purple border-accent-purple/20',
+    gradient: 'from-accent-purple to-accent-amber',
+    skills: [
+      { name: 'Routing & Switching', icon: 'router', context: 'VLAN, Inter-VLAN routing, STP, EtherChannel, HSRP configuration on Cisco devices.', project: 'CCNA Certification' },
+      { name: 'IPv4 & IPv6', icon: 'ip', context: 'Subnetting, VLSM, static and dynamic routing for both IPv4 and IPv6 networks.', project: 'CCNA Certification' },
+      { name: 'Access Lists', icon: 'shield', context: 'Standard and extended ACLs for traffic filtering and network security policy implementation.', project: 'CCNA Certification' },
+      { name: 'OSPF & EIGRP', icon: 'route', context: 'Dynamic routing protocol configuration, optimization, and troubleshooting.', project: 'CCNA Certification' },
+      { name: 'DHCP & NAT', icon: 'server', context: 'DHCP server configuration, NAT/PAT for IP address conservation and network access.', project: 'CCNA Certification' },
+      { name: 'Network Security', icon: 'lock', context: 'Port security, DHCP snooping, dynamic ARP inspection, and basic firewall concepts.', project: 'CCNA Certification' },
+    ]
+  },
+  {
+    title: 'MikroTik (MTCNA, MTCRE)',
+    accentColor: 'text-accent-green',
+    iconBg: 'bg-accent-green/10',
+    borderColor: 'hover:border-accent-green/30',
+    glow: 'hover:shadow-[0_0_20px_rgba(0,255,136,0.08)]',
+    tagColor: 'bg-accent-green/10 text-accent-green border-accent-green/20',
+    gradient: 'from-accent-green to-primary',
+    skills: [
+      { name: 'RouterOS Administration', icon: 'router', context: 'Full RouterOS configuration including interface management, user management, and system backup.', project: 'MTCNA Certification' },
+      { name: 'Firewall & NAT', icon: 'shield', context: 'Firewall filter rules, NAT masquerade, dst-nat, and connection tracking configuration.', project: 'MTCNA Certification' },
+      { name: 'VLAN & Bridging', icon: 'net', context: 'VLAN configuration, bridge interfaces, and Ethernet-like interface management.', project: 'MTCRE Certification' },
+      { name: 'OSPF Routing', icon: 'route', context: 'OSPF configuration on MikroTik, area types, route redistribution, and optimization.', project: 'MTCRE Certification' },
+      { name: 'VPN & Tunneling', icon: 'vpn', context: 'PPTP, L2TP, SSTP, OpenVPN tunnels and IPsec configuration for secure connectivity.', project: 'MTCRE Certification' },
+      { name: 'QoS & Bandwidth Management', icon: 'speed', context: 'Queue trees, simple queues, PCQ for bandwidth management and traffic shaping.', project: 'MTCNA Certification' },
+    ]
+  },
+  {
+    title: 'Fortinet & Security',
+    accentColor: 'text-primary',
+    iconBg: 'bg-primary/10',
+    borderColor: 'hover:border-primary/30',
+    glow: 'hover:shadow-[0_0_20px_rgba(0,212,255,0.08)]',
+    tagColor: 'bg-primary/10 text-primary border-primary/20',
+    gradient: 'from-primary to-accent-cyan',
+    skills: [
+      { name: 'FortiGate Firewall', icon: 'shield', context: 'FortiGate configuration including firewall policies, NAT, DHCP, and HA setup.', project: 'Fortinet FCA Certification' },
+      { name: 'Network Security', icon: 'lock', context: 'Security policies, threat protection, application control, and web filtering.', project: 'Fortinet FCF Certification' },
+      { name: 'High Availability', icon: 'ha', context: 'FortiGate HA clustering, failover configuration, and synchronization.', project: 'Fortinet FCA Certification' },
+    ]
+  },
+  {
+    title: 'Tools & Technologies',
+    accentColor: 'text-accent-cyan',
+    iconBg: 'bg-accent-cyan/10',
+    borderColor: 'hover:border-accent-cyan/30',
+    glow: 'hover:shadow-[0_0_20px_rgba(34,211,238,0.08)]',
+    tagColor: 'bg-accent-cyan/10 text-accent-cyan border-accent-cyan/20',
+    gradient: 'from-accent-cyan to-accent-purple',
+    skills: [
+      { name: 'PNET Lab / EVE-NG', icon: 'lab', context: 'Virtual network labs for Cisco and MikroTik device emulation and topology testing.', project: null },
+      { name: 'Cisco Packet Tracer', icon: 'net', context: 'Network simulation for CCNA-level topology design and protocol verification.', project: null },
+      { name: 'VMWare & Virtualization', icon: 'vm', context: 'Virtual machine management for network appliance testing and lab environments.', project: null },
+      { name: 'Canva & Figma', icon: 'design', context: 'Technical diagram creation and visual documentation for network topologies.', project: null },
+    ]
+  },
 ];
 
 export const projects = [
   {
     id: 1,
-    title: "My Big Dream in AWS",
-    type: "Book",
-    period: "January – May 2025",
-    description: "Fundamentals of AWS services (EC2, VPC, IAM, S3) for beginners. A comprehensive guide to cloud networking.",
-    tags: ["AWS", "Cloud", "EC2", "VPC"],
-    status: "completed"
+    title: 'Your Skill in CCNA',
+    period: 'Jan - Jul 2024',
+    association: 'Published Book',
+    icon: 'book',
+    role: 'Author',
+    roleType: 'individual',
+    category: 'books',
+    description: 'A 400-page comprehensive book covering networking fundamentals and Cisco product introductions. Designed for CCNA certification aspirants.',
+    responsibilities: [
+      'Authored comprehensive CCNA study material covering all exam topics.',
+      'Designed practical lab scenarios for hands-on learning.',
+      'Included troubleshooting guides and best practices.',
+    ],
+    impact: 'Bestselling CCNA preparation book used by students across multiple institutions.',
+    skills: ['CCNA', 'Routing', 'Switching', 'Network Security', 'Technical Writing'],
+    color: 'text-primary',
   },
   {
     id: 2,
-    title: "Master Can Be Better CCNP",
-    type: "Book",
-    period: "July 2024 – Present",
-    description: "A 500+ page lab-based book on advanced Cisco networking for CCNP certification.",
-    tags: ["CCNP", "Cisco", "Enterprise", "Advanced"],
-    status: "ongoing"
+    title: 'In Another World with MTCRE',
+    period: 'Nov 2023 - Feb 2024',
+    association: 'Published Book',
+    icon: 'book',
+    role: 'Author',
+    roleType: 'individual',
+    category: 'books',
+    description: 'Focused on static and dynamic routing, VLAN, and tunneling on MikroTik routers. Advanced MikroTik routing concepts.',
+    responsibilities: [
+      'Developed structured MTCRE curriculum with real-world scenarios.',
+      'Created detailed routing protocol configuration examples.',
+      'Included troubleshooting methodologies and best practices.',
+    ],
+    impact: 'Go-to resource for MikroTik routing certification preparation.',
+    skills: ['MikroTik', 'MTCRE', 'OSPF', 'VLAN', 'Tunneling', 'Technical Writing'],
+    color: 'text-accent-green',
   },
   {
     id: 3,
-    title: "Your Skill in CCNA",
-    type: "Book",
-    period: "January – July 2024",
-    description: "A 400-page book covering network fundamentals and an introduction to Cisco products.",
-    tags: ["CCNA", "Cisco", "Networking", "Fundamentals"],
-    status: "completed"
+    title: 'Master Can Be Better CCNP',
+    period: 'Jul 2024 - Present',
+    association: 'Ongoing Book',
+    icon: 'book',
+    role: 'Author',
+    roleType: 'individual',
+    category: 'books',
+    description: 'A 500+ page lab-based book on advanced Cisco networking for CCNP certification preparation. Still in development.',
+    responsibilities: [
+      'Writing advanced routing and switching content.',
+      'Designing complex multi-protocol lab scenarios.',
+      'Creating comprehensive troubleshooting guides.',
+    ],
+    impact: 'Upcoming comprehensive CCNP preparation resource.',
+    skills: ['CCNP', 'Cisco', 'Advanced Routing', 'Enterprise Networks', 'Technical Writing'],
+    color: 'text-accent-purple',
+    status: 'ongoing',
   },
   {
     id: 4,
-    title: "In Another World with MTCRE",
-    type: "Book",
-    period: "November 2023 – February 2024",
-    description: "Focused on static & dynamic routing, VLANs, and tunneling on MikroTik routers.",
-    tags: ["MikroTik", "MTCRE", "Routing", "VLAN"],
-    status: "completed"
+    title: 'Beginner-to-Master MTCNA',
+    period: 'Oct - Nov 2023',
+    association: 'Published Book',
+    icon: 'book',
+    role: 'Author',
+    roleType: 'individual',
+    category: 'books',
+    description: 'Complete guide covering MikroTik RouterOS fundamentals and basic configuration from beginner to master level.',
+    responsibilities: [
+      'Created beginner-friendly MikroTik content.',
+      'Covered RouterOS interface, firewall, NAT, and QoS.' ,
+      'Included step-by-step configuration guides.',
+    ],
+    impact: 'First published book establishing the author as a MikroTik subject matter expert.',
+    skills: ['MikroTik', 'MTCNA', 'RouterOS', 'Firewall', 'QoS', 'Technical Writing'],
+    color: 'text-accent-green',
   },
   {
     id: 5,
-    title: "Beginner-to-Master MTCNA",
-    type: "Book",
-    period: "October – November 2023",
-    description: "Covered network fundamentals and basic MikroTik configurations.",
-    tags: ["MikroTik", "MTCNA", "Basics", "Configuration"],
-    status: "completed"
-  }
+    title: 'My Big Dream in AWS',
+    period: 'Jan - May 2025',
+    association: 'Published Book',
+    icon: 'book',
+    role: 'Author',
+    roleType: 'individual',
+    category: 'books',
+    description: 'AWS fundamentals book covering EC2, VPC, IAM, and S3 for beginners. Comprehensive cloud networking guide.',
+    responsibilities: [
+      'Authored AWS cloud fundamentals content.',
+      'Covered VPC design and EC2 configuration.',
+      'Included IAM security best practices.',
+    ],
+    impact: 'Expanded portfolio into cloud networking domain.',
+    skills: ['AWS', 'Cloud', 'EC2', 'VPC', 'IAM', 'S3', 'Technical Writing'],
+    color: 'text-accent-purple',
+  },
 ];
-
-export const achievements = [
-  {
-    id: 1,
-    title: "2nd Place - National Computer Network Competition",
-    event: "PNB IT Competition #16 X ECO",
-    date: "October 2024",
-    icon: "🥈"
-  },
-  {
-    id: 2,
-    title: "1st Place - English Competition",
-    event: "OSPN 2024",
-    date: "June 2024",
-    icon: "🥇"
-  },
-  {
-    id: 3,
-    title: "Bronze Medalist (3rd Place) - English Competition",
-    event: "NOSEC 2023",
-    date: "October 2023",
-    icon: "🥉"
-  },
-  {
-    id: 4,
-    title: "Silver Medalist (2nd Place) - Informatics Competition",
-    event: "NOSEC 2023",
-    date: "October 2023",
-    icon: "🥈"
-  }
-];
-
-export const skills = {
-  "Cisco (CCNA)": [
-    "Routing",
-    "Switching",
-    "IPv4",
-    "IPv6",
-    "VLAN",
-    "Access List",
-    "FHRP",
-    "DHCP",
-    "NAT"
-  ],
-  "MikroTik (MTCNA, MTCRE)": [
-    "Routing",
-    "Switching",
-    "VLAN",
-    "Firewall",
-    "VPN",
-    "Tunneling",
-    "QoS",
-    "DHCP",
-    "NAT"
-  ],
-  "Fortinet (FortiGate)": [
-    "FortiGate",
-    "Firewall",
-    "NAT",
-    "DHCP",
-    "HA"
-  ],
-  "Tools & Technologies": [
-    "PNET Lab",
-    "Cisco Packet Tracer",
-    "VMWare",
-    "Telnet & SSH"
-  ],
-  design: ["Canva", "Figma"],
-  softSkills: [
-    "Teamwork",
-    "Time Management",
-    "Problem-Solving",
-    "Teaching & Training",
-    "Public Speaking",
-    "Technical Writing"
-  ],
-  languages: [
-    { name: "Indonesian", level: "Native" },
-    { name: "English", level: "Intermediate" }
-  ]
-};
 
 export const certifications = [
-  /*
-  {
-    id: 1,
-    name: "Fortinet NSE 6 - FortiProxy",
-    issuer: "Fortinet",
-    date: "December 2024",
-    color: "#ff2a6d",
-    description: "Specialized in deploying and managing FortiProxy secure web gateway solutions. Expertise in web filtering, SSL inspection, explicit/transparent proxy modes, authentication policies, and caching optimization for enterprise networks."
-  },
-  */
-  {
-    id: 2,
-    name: "Fortinet Certified Associate in Cybersecurity (FCA)",
-    issuer: "Fortinet",
-    date: "July 2025",
-    color: "#ff2a6d",
-    description: "Associate-level certification validating foundational cybersecurity knowledge and understanding of the threat landscape."
-  },
-  {
-    id: 3,
-    name: "Fortinet Certified Fundamentals in Cybersecurity (FCF)",
-    issuer: "Fortinet",
-    date: "July 2025",
-    color: "#ff2a6d",
-    description: "Fundamental certification covering core cybersecurity concepts, threat types, and security best practices."
-  },
-  {
-    id: 4,
-    name: "AI Solutions on Cisco Infrastructure Essentials (DCAIE)",
-    issuer: "Cisco",
-    date: "April 2025",
-    color: "#00f5ff",
-    description: "Certification in AI-powered networking solutions on Cisco infrastructure, covering machine learning integration with network operations."
-  },
-  {
-    id: 5,
-    name: "Cisco Certified Network Associate (CCNA)",
-    issuer: "Cisco",
-    date: "April 2025",
-    color: "#00f5ff",
-    description: "Industry-recognized certification validating expertise in network fundamentals, IP connectivity, security fundamentals, and automation."
-  },
-  {
-    id: 6,
-    name: "MikroTik Certified Routing Engineer (MTCRE)",
-    issuer: "MikroTik",
-    date: "December 2023",
-    color: "#05ffa1",
-    description: "Advanced certification in MikroTik routing protocols, OSPF, static routing, policy routing, and routing filters."
-  },
-  {
-    id: 7,
-    name: "MikroTik Certified Network Associate (MTCNA)",
-    issuer: "MikroTik",
-    date: "November 2023",
-    color: "#05ffa1",
-    description: "Foundation certification covering MikroTik RouterOS basics, firewall, QoS, NAT, and wireless networking."
-  }
-];
-
-export const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Experience", href: "#experience" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Certifications", href: "#certifications" },
-  { name: "Contact", href: "#contact" }
+  { title: 'Fortinet Certified Associate in Cybersecurity (FCA)', org: 'Fortinet', date: 'Jul 2025', icon: 'fortinet', color: 'text-error', bg: 'bg-error/10' },
+  { title: 'FCF — Technical Introduction to Cybersecurity 2.0', org: 'Fortinet', date: 'Jul 2025', icon: 'fortinet', color: 'text-error', bg: 'bg-error/10' },
+  { title: 'Fortinet Certified Fundamentals in Cybersecurity (FCF)', org: 'Fortinet', date: 'Jul 2025', icon: 'fortinet', color: 'text-error', bg: 'bg-error/10' },
+  { title: 'FCF — Getting Started in Cybersecurity 3.0', org: 'Fortinet', date: 'Jul 2025', icon: 'fortinet', color: 'text-error', bg: 'bg-error/10' },
+  { title: 'FCF — Introduction to the Threat Landscape 3.0', org: 'Fortinet', date: 'Jul 2025', icon: 'fortinet', color: 'text-error', bg: 'bg-error/10' },
+  { title: 'AI Solutions on Cisco Infrastructure Essentials (DCAIE)', org: 'Cisco', date: 'Apr 2025', icon: 'ai', color: 'text-primary', bg: 'bg-primary/10' },
+  { title: 'Cisco Certified Network Associate (CCNA)', org: 'Cisco', date: 'Apr 2025', icon: 'cisco', color: 'text-primary', bg: 'bg-primary/10' },
+  { title: 'Network Addressing and Basic Troubleshooting', org: 'Cisco', date: 'Feb 2025', icon: 'cisco', color: 'text-primary', bg: 'bg-primary/10' },
+  { title: 'Networking Devices and Initial Configuration', org: 'Cisco', date: 'Jul 2024', icon: 'cisco', color: 'text-primary', bg: 'bg-primary/10' },
+  { title: 'Networking Basics', org: 'Cisco', date: 'Jun 2024', icon: 'cisco', color: 'text-primary', bg: 'bg-primary/10' },
+  { title: 'CCNAv7: Introduction to Networks', org: 'Cisco', date: 'Apr 2024', icon: 'cisco', color: 'text-primary', bg: 'bg-primary/10' },
+  { title: 'Introduction to Cybersecurity', org: 'Cisco', date: 'May 2024', icon: 'cisco', color: 'text-primary', bg: 'bg-primary/10' },
+  { title: 'CCNAv7: Switching, Routing, and Wireless Essentials', org: 'Cisco', date: 'Apr 2024', icon: 'cisco', color: 'text-primary', bg: 'bg-primary/10' },
+  { title: 'CCNAv7: Enterprise Networking, Security, and Automation', org: 'Cisco', date: 'Apr 2024', icon: 'cisco', color: 'text-primary', bg: 'bg-primary/10' },
+  { title: 'Networking Essentials', org: 'Cisco Networking Academy', date: 'Aug 2023', icon: 'cisco', color: 'text-accent-green', bg: 'bg-accent-green/10' },
+  { title: 'MikroTik Certified Routing Engineer (MTCRE)', org: 'MikroTik', date: 'Dec 2023', icon: 'mikrotik', color: 'text-accent-green', bg: 'bg-accent-green/10' },
+  { title: 'MikroTik Certified Network Associate (MTCNA)', org: 'MikroTik', date: 'Nov 2023', icon: 'mikrotik', color: 'text-accent-green', bg: 'bg-accent-green/10' },
+  { title: 'APJC NetAcad Riders 2024', org: 'Cisco', date: 'Apr 2024', icon: 'competition', color: 'text-accent-purple', bg: 'bg-accent-purple/10' },
 ];
