@@ -62,7 +62,7 @@ const Hero = () => {
                                     <Network size={16} weight="bold" />
                                     Network Engineer &middot; CCNA &middot; MTCRE
                                 </div>
-                                <h1 className="text-[44px] md:text-[64px] lg:text-[80px] xl:text-[96px] font-bold tracking-tighter leading-[1.02]">
+                                <h1 className="text-[36px] md:text-[52px] lg:text-[64px] xl:text-[76px] font-bold tracking-tighter leading-[1.02]">
                                     <span className="text-foreground">MUHAMMAD</span>
                                     <br />
                                     <span className="text-gradient-cyan">HAIKAL</span>{' '}
