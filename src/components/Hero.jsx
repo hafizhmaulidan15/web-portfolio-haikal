@@ -73,7 +73,7 @@ const Hero = () => {
                                     <span className="text-foreground font-medium">routing, switching, and network security</span>.
                                     Certified in Cisco, MikroTik, and Fortinet technologies.
                                 </p>
-                                <div className="flex items-center gap-4 md:gap-5 text-sm md:text-base font-mono text-text-tertiary">
+                                <div className="flex items-center gap-4 md:gap-5 text-sm md:text-base font-mono text-text-tertiary flex-wrap">
                                     <span className="flex items-center gap-1.5">
                                         <MapPin size={16} weight="bold" className="text-primary" />
                                         Bogor, Indonesia

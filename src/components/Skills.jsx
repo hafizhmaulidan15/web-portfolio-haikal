@@ -127,18 +127,18 @@ const Skills = () => {
                                                     </div>
 
                                                     {/* Load/Active columns */}
-                                                    <span className="text-text-muted w-16 shrink-0">loaded</span>
+                                                    <span className="text-text-muted w-16 shrink-0 hidden sm:inline">loaded</span>
                                                     <span className={cn(
-                                                        "w-14 shrink-0",
+                                                        "w-14 shrink-0 hidden md:inline",
                                                         isExpanded ? "text-accent-green" : "text-text-tertiary"
                                                     )}>
-                                                        {isExpanded ? 'active' : 'active'}
+                                                        active
                                                     </span>
                                                     <span className={cn(
-                                                        "w-20 shrink-0",
+                                                        "w-20 shrink-0 hidden md:inline",
                                                         isExpanded ? "text-accent-green" : "text-text-tertiary"
                                                     )}>
-                                                        {isExpanded ? 'running' : 'running'}
+                                                        running
                                                     </span>
 
                                                     {/* Skill name + icon */}
@@ -170,7 +170,7 @@ const Skills = () => {
                                                             transition={{ duration: 0.2, ease: 'easeInOut' }}
                                                             className="overflow-hidden"
                                                         >
-                                                            <div className="ml-[168px] mr-4 pb-3">
+                                                            <div className="ml-0 md:ml-[168px] mr-4 pb-3">
                                                                 <div className={cn(
                                                                     "rounded-lg border p-3 space-y-2 font-mono text-xs",
                                                                     group.iconBg, `border-current/10`
@@ -194,7 +194,7 @@ const Skills = () => {
                                                                     )}
 
                                                                     {/* Status footer */}
-                                                                    <div className="flex items-center gap-3 pt-1.5 border-t border-white/[0.04] text-[9px] text-text-muted">
+                                                                    <div className="flex items-center gap-3 pt-1.5 border-t border-white/[0.04] text-[9px] text-text-muted flex-wrap">
                                                                         <span>● active</span>
                                                                         <span>uptime: certified</span>
                                                                         <span className="ml-auto">capability.service</span>

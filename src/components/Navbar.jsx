@@ -100,8 +100,8 @@ const Navbar = () => {
             />
 
             <div className={cn(
-                "md:hidden fixed top-14 left-0 right-0 z-40 bg-background/95 backdrop-blur-lg border-b border-white/[0.06] transition-all duration-300 overflow-hidden",
-                isMobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                "md:hidden fixed top-14 left-0 right-0 z-40 bg-background/95 backdrop-blur-lg border-b border-white/[0.06] transition-all duration-300 overflow-y-auto",
+                isMobileMenuOpen ? 'max-h-[calc(100vh-56px)] opacity-100' : 'max-h-0 opacity-0'
             )}>
                 <nav className="px-4 py-4 space-y-1">
                     {navLinks.map((link) => {

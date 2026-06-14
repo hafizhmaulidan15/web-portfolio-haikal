@@ -9,7 +9,7 @@ export const profileData = {
   location: "Bogor, Indonesia",
   linkedin: "https://linkedin.com/in/muhammad-haikal-ramadhika-5749b22a6",
   github: "https://github.com/haikal-ramadhika",
-  about: `Student at SMK IDN Boarding School, aspiring Junior Network Engineer with hands-on experience in network design, security, and protocol implementation. Holds CCNA, MTCRE, MTCNA, DCAIE, and Fortinet certifications. Active as a trainer and technical book author, with competition experience at national and international levels.`,
+  about: `Graduate of SMK IDN Boarding School, Junior Network Engineer with hands-on experience in network design, security, and protocol implementation. Holds CCNA, MTCRE, MTCNA, DCAIE, and Fortinet certifications. Active as a trainer and technical book author, with competition experience at national and international levels.`,
 };
 
 export const infoCards = [
@@ -32,7 +32,7 @@ export const infoCards = [
   {
     icon: 'chart',
     title: 'Specialization',
-    description: 'Cisco & MikroTik Networking',
+    description: 'Cisco, MikroTik & Fortinet',
     color: 'text-accent-green',
     bg: 'bg-accent-green/10',
     glow: 'border-glow-top-green'
@@ -253,6 +253,30 @@ export const experiences = [
     color: 'accent-purple',
     skills: ['MikroTik', 'IP Services', 'Firewall', 'NAT', 'QoS', 'RouterOS']
   },
+  {
+    title: 'Master Can Be Better CCNP',
+    company: 'IDN Boarding School',
+    location: 'Bogor, Indonesia',
+    date: 'Jul 2024 - Present',
+    description: 'A 500+ page lab-based book on advanced Cisco networking for CCNP certification preparation. Still in development.',
+    type: 'project',
+    category: 'project',
+    icon: 'book',
+    color: 'accent-purple',
+    skills: ['CCNP', 'Cisco', 'Advanced Routing', 'Enterprise Networks', 'Technical Writing']
+  },
+  {
+    title: 'My Big Dream in AWS',
+    company: 'IDN Boarding School',
+    location: 'Bogor, Indonesia',
+    date: 'Jan - May 2025',
+    description: 'AWS fundamentals book covering EC2, VPC, IAM, and S3 for beginners. Comprehensive cloud networking guide.',
+    type: 'project',
+    category: 'project',
+    icon: 'book',
+    color: 'accent-purple',
+    skills: ['AWS', 'Cloud', 'EC2', 'VPC', 'IAM', 'S3', 'Technical Writing']
+  },
 ];
 
 export const skillGroups = [
@@ -438,5 +462,4 @@ export const certifications = [
   { title: 'Networking Essentials', org: 'Cisco Networking Academy', date: 'Aug 2023', icon: 'cisco', color: 'text-accent-green', bg: 'bg-accent-green/10' },
   { title: 'MikroTik Certified Routing Engineer (MTCRE)', org: 'MikroTik', date: 'Dec 2023', icon: 'mikrotik', color: 'text-accent-green', bg: 'bg-accent-green/10' },
   { title: 'MikroTik Certified Network Associate (MTCNA)', org: 'MikroTik', date: 'Nov 2023', icon: 'mikrotik', color: 'text-accent-green', bg: 'bg-accent-green/10' },
-  { title: 'APJC NetAcad Riders 2024', org: 'Cisco', date: 'Apr 2024', icon: 'competition', color: 'text-accent-purple', bg: 'bg-accent-purple/10' },
 ];
