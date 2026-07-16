@@ -7,7 +7,7 @@ const MotionDiv = m.div;
 const About = () => {
     const systemInfo = [
         { label: 'Name', value: 'Muhammad Haikal Ramadhika' },
-        { label: 'Role', value: 'NOC & Network Security' },
+        { label: 'Role', value: 'NOC Engineer' },
         { label: 'Location', value: 'Bogor, Indonesia' },
         { label: 'Email', value: profileData.email },
         { label: 'Education', value: 'SMK IDN Boarding School — TKJ' },
@@ -139,8 +139,8 @@ const About = () => {
                                 </p>
                                 <p>{profileData.about}</p>
                                 <p>
-                                    Currently serving as <span className="text-foreground font-medium">NOC & Network Security at PT Yaksa Ersada Solusindo</span>,
-                                    I monitor network operations and support information security tasks. My journey includes training 70+ students
+                                    Currently serving as <span className="text-foreground font-medium">NOC Engineer at PT Inovasi Tjaraka Buana (MyNet)</span>,
+                                    I monitor network operations and ensure ISP infrastructure uptime. My journey includes training 70+ students
                                     across Indonesia and Malaysia, authoring 5 technical books on networking, and earning multiple industry
                                     certifications from Cisco, MikroTik, and Fortinet.
                                 </p>
@@ -154,9 +154,9 @@ const About = () => {
                             className="grid grid-cols-2 gap-3"
                         >
                             {[
-                                { icon: Briefcase, label: 'Current Role', value: 'NOC & Network Security', color: 'text-primary' },
+                                { icon: Briefcase, label: 'Current Role', value: 'NOC Engineer', color: 'text-primary' },
                                 { icon: GraduationCap, label: 'Education', value: 'SMK IDN Boarding School', color: 'text-accent-purple' },
-                                { icon: Network, label: 'Specialization', value: 'Cisco & MikroTik', color: 'text-accent-green' },
+                                { icon: Network, label: 'Specialization', value: 'Cisco, MikroTik & Fortinet', color: 'text-accent-green' },
                                 { icon: WifiHigh, label: 'Students Trained', value: '70+', color: 'text-accent-amber' },
                             ].map((item, idx) => (
                                 <div key={idx} className="p-4 rounded-xl border border-white/[0.06] bg-surface/40 backdrop-blur-sm">

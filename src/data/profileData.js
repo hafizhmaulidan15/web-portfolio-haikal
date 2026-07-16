@@ -16,7 +16,7 @@ export const infoCards = [
   {
     icon: 'briefcase',
     title: 'Current role',
-    description: 'Network Security Engineer — Yaksa Ersada Solusindo',
+    description: 'NOC Engineer — PT Inovasi Tjaraka Buana (MyNet)',
     color: 'text-primary',
     bg: 'bg-primary/10',
     glow: 'border-glow-top-cyan'
@@ -52,25 +52,26 @@ export const achievements = [
   { text: 'MTCRE Certified', icon: 'router', color: 'text-accent-green' },
   { text: 'Technical Author', icon: 'book', color: 'text-accent-purple' },
   { text: 'APJC NetAcad Riders 2024', icon: 'training', color: 'text-accent-amber' },
+  { text: 'FCA Certified', icon: 'shield', color: 'text-primary' },
 ];
 
 export const experiences = [
   // --- KERJA / MAGANG ---
   {
-    title: 'Network Security Engineer',
-    company: 'Yaksa Ersada Solusindo',
-    location: 'Kota Tangerang, Banten',
-    date: 'Jul 2025 - Present',
-    description: 'Internship role focusing on network operations and security. Tasks include monitoring network performance (NOC duties), handling incident tickets, and assisting in security-related configurations such as access control and web filtering.',
-    type: 'magang',
+    title: 'NOC Engineer',
+    company: 'PT Inovasi Tjaraka Buana (MyNet)',
+    location: 'Bandung, Jawa Barat',
+    date: 'Feb 2026 - Present',
+    description: 'NOC Engineering role focusing on network monitoring, incident management, and maintaining ISP infrastructure uptime. Handles network troubleshooting, configuration changes, and coordinates with field teams for service restoration.',
+    type: 'full-time',
     category: 'work',
     icon: 'shield',
     color: 'primary',
     metrics: [
       { value: '24/7', label: 'monitoring', color: 'text-primary' },
-      { value: '99%', label: 'uptime', color: 'text-accent-green' }
+      { value: '99.9%', label: 'uptime target', color: 'text-accent-green' }
     ],
-    pillars: ['Network Ops', 'Firewalls', 'Access Lists', 'Incident Response']
+    pillars: ['Network Monitoring', 'Incident Management', 'ISP Infrastructure', 'Troubleshooting']
   },
   {
     title: 'Network Administrator',
@@ -295,6 +296,8 @@ export const skillGroups = [
       { name: 'OSPF & EIGRP', icon: 'route', context: 'Dynamic routing protocol configuration, optimization, and troubleshooting.', project: 'CCNA Certification' },
       { name: 'DHCP & NAT', icon: 'server', context: 'DHCP server configuration, NAT/PAT for IP address conservation and network access.', project: 'CCNA Certification' },
       { name: 'Network Security', icon: 'lock', context: 'Port security, DHCP snooping, dynamic ARP inspection, and basic firewall concepts.', project: 'CCNA Certification' },
+      { name: 'DMVPN', icon: 'vpn', context: 'Dynamic Multipoint VPN configuration, mGRE, NHRP, and routing over DMVPN tunnels.', project: 'CCNP Certification' },
+      { name: 'MPLS', icon: 'route', context: 'MPLS label switching, LDP, VPNv4, and MPLS Layer 3 VPN configuration.', project: 'CCNP Certification' },
     ]
   },
   {
@@ -393,7 +396,7 @@ export const projects = [
     role: 'Author',
     roleType: 'individual',
     category: 'books',
-    description: 'A 500+ page lab-based book on advanced Cisco networking for CCNP certification preparation. Still in development.',
+    description: 'A 1000+ page lab-based book on advanced Cisco networking for CCNP certification preparation. Still in development.',
     responsibilities: [
       'Writing advanced routing and switching content.',
       'Designing complex multi-protocol lab scenarios.',
@@ -450,6 +453,13 @@ export const certifications = [
   { title: 'Fortinet Certified Fundamentals in Cybersecurity (FCF)', org: 'Fortinet', date: 'Jul 2025', icon: 'fortinet', color: 'text-error', bg: 'bg-error/10' },
   { title: 'FCF — Getting Started in Cybersecurity 3.0', org: 'Fortinet', date: 'Jul 2025', icon: 'fortinet', color: 'text-error', bg: 'bg-error/10' },
   { title: 'FCF — Introduction to the Threat Landscape 3.0', org: 'Fortinet', date: 'Jul 2025', icon: 'fortinet', color: 'text-error', bg: 'bg-error/10' },
+  { title: 'FortiGate Administrator', org: 'Fortinet', date: 'Jul 2025', icon: 'fortinet', color: 'text-error', bg: 'bg-error/10' },
+  { title: 'FCSS SD-WAN Architect', org: 'Fortinet', date: 'Jul 2025', icon: 'fortinet', color: 'text-error', bg: 'bg-error/10' },
+  { title: 'FCSS Enterprise Firewall', org: 'Fortinet', date: 'Jul 2025', icon: 'fortinet', color: 'text-error', bg: 'bg-error/10' },
+  { title: 'FortiAnalyzer Administrator', org: 'Fortinet', date: 'Jul 2025', icon: 'fortinet', color: 'text-error', bg: 'bg-error/10' },
+  { title: 'FortiManager Administrator', org: 'Fortinet', date: 'Jul 2025', icon: 'fortinet', color: 'text-error', bg: 'bg-error/10' },
+  { title: 'FortiProxy Administrator', org: 'Fortinet', date: 'Jul 2025', icon: 'fortinet', color: 'text-error', bg: 'bg-error/10' },
+  { title: 'FortiClient EMS Administrator', org: 'Fortinet', date: 'Jul 2025', icon: 'fortinet', color: 'text-error', bg: 'bg-error/10' },
   { title: 'AI Solutions on Cisco Infrastructure Essentials (DCAIE)', org: 'Cisco', date: 'Apr 2025', icon: 'ai', color: 'text-primary', bg: 'bg-primary/10' },
   { title: 'Cisco Certified Network Associate (CCNA)', org: 'Cisco', date: 'Apr 2025', icon: 'cisco', color: 'text-primary', bg: 'bg-primary/10' },
   { title: 'Network Addressing and Basic Troubleshooting', org: 'Cisco', date: 'Feb 2025', icon: 'cisco', color: 'text-primary', bg: 'bg-primary/10' },
