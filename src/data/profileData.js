@@ -74,6 +74,22 @@ export const experiences = [
     pillars: ['Network Monitoring', 'Incident Management', 'ISP Infrastructure', 'Troubleshooting']
   },
   {
+    title: 'Network Security Engineer',
+    company: 'Yaksa Ersada Solusindo',
+    location: 'Kota Tangerang, Banten',
+    date: 'Jul 2025 - Present',
+    description: 'Internship role focusing on network operations and security. Tasks include monitoring network performance (NOC duties), handling incident tickets, and assisting in security-related configurations such as access control and web filtering.',
+    type: 'magang',
+    category: 'work',
+    icon: 'shield',
+    color: 'primary',
+    metrics: [
+      { value: '24/7', label: 'monitoring', color: 'text-primary' },
+      { value: '99%', label: 'uptime', color: 'text-accent-green' }
+    ],
+    pillars: ['Network Ops', 'Firewalls', 'Access Lists', 'Incident Response']
+  },
+  {
     title: 'Network Administrator',
     company: 'Institut Pertanian Bogor (IPB)',
     location: 'Bogor, Indonesia',
