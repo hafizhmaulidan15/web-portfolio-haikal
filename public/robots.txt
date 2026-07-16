@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://web-portfolio-haikal.vercel.app/sitemap.xml

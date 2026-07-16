@@ -1,13 +1,74 @@
-import { motion as m } from 'framer-motion';
-import { Envelope, GithubLogo, LinkedinLogo, MapPin, TerminalWindow, Phone } from '@phosphor-icons/react';
+import { useState } from 'react';
+import { motion as m, AnimatePresence } from 'framer-motion';
+import { Envelope, GithubLogo, LinkedinLogo, MapPin, TerminalWindow, Phone, CaretDown } from '@phosphor-icons/react';
 import { profileData } from '../data/profileData';
+import { cn } from '../lib/utils';
 
 const MotionDiv = m.div;
 const MotionA = m.a;
 
+const faqs = [
+    {
+        q: 'What networking technologies do you specialize in?',
+        a: 'Cisco routing & switching (OSPF, EIGRP, BGP, DMVPN, MPLS, VLAN, STP, EtherChannel), MikroTik RouterOS (firewall, NAT, VPN, OSPF, QoS, MTCRE/MTCNA), and Fortinet security (FortiGate, SD-WAN, Enterprise Firewall, FortiAnalyzer, FortiManager).'
+    },
+    {
+        q: 'What certifications do you hold?',
+        a: 'CCNA (Cisco Certified Network Associate), MTCRE (MikroTik Certified Routing Engineer), MTCNA (MikroTik Certified Network Associate), FCA (Fortinet Certified Associate), FortiGate Administrator, FCSS SD-WAN Architect, FCSS Enterprise Firewall, and DCAIE.'
+    },
+    {
+        q: 'Are you available for freelance or collaboration?',
+        a: 'Yes, I am open to freelance opportunities in network design, implementation, troubleshooting, training, and technical writing. Contact me via email or LinkedIn to discuss your project.'
+    },
+    {
+        q: 'Do you provide network training or mentoring?',
+        a: 'Yes, I have trained 70+ students across Indonesia and Malaysia in CCNA and MikroTik. I am available for corporate training, bootcamps, and one-on-one mentoring sessions.'
+    },
+    {
+        q: 'What books have you authored?',
+        a: 'I have written 5 technical books: Your Skill in CCNA (400 pages), In Another World with MTCRE, Master Can Be Better CCNP (1000+ pages, ongoing), Beginner-to-Master MTCNA, and My Big Dream in AWS.'
+    },
+];
+
+const AccordionItem = ({ faq, idx, open, onToggle }) => (
+    <div className="border border-white/[0.06] rounded-lg overflow-hidden bg-surface/40 backdrop-blur-sm">
+        <button
+            onClick={onToggle}
+            className="w-full flex items-center justify-between gap-3 px-4 py-3.5 text-left hover:bg-white/[0.02] transition-colors"
+        >
+            <span className="text-xs md:text-sm font-medium text-foreground">{faq.q}</span>
+            <CaretDown
+                size={14}
+                weight="bold"
+                className={cn(
+                    "text-text-tertiary shrink-0 transition-transform duration-300",
+                    open && "rotate-180"
+                )}
+            />
+        </button>
+        <AnimatePresence>
+            {open && (
+                <MotionDiv
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.25, ease: 'easeInOut' }}
+                    className="overflow-hidden"
+                >
+                    <div className="px-4 pb-3.5 text-xs md:text-sm text-text-secondary leading-relaxed border-t border-white/[0.04] pt-3">
+                        {faq.a}
+                    </div>
+                </MotionDiv>
+            )}
+        </AnimatePresence>
+    </div>
+);
+
 const Contact = () => {
+    const [openIdx, setOpenIdx] = useState(null);
+
     return (
-        <section className="py-16 px-6 min-h-screen bg-background relative overflow-hidden flex items-center">
+        <section className="py-16 px-6 min-h-screen bg-background relative overflow-hidden">
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 blur-[120px] rounded-full"></div>
                 <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-purple/5 blur-[120px] rounded-full"></div>
@@ -24,7 +85,7 @@ const Contact = () => {
                     <span className="text-text-tertiary">./connect.sh --interactive</span>
                 </MotionDiv>
 
-                <div className="text-center space-y-8">
+                <div className="text-center space-y-8 mb-16">
                     <MotionDiv
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -87,16 +148,6 @@ const Contact = () => {
                             Send Email
                         </MotionA>
                         <MotionA
-                            href={profileData.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            whileHover={{ scale: 1.03 }}
-                            className="px-5 py-3 bg-interactive-button border border-white/[0.1] text-foreground font-sans text-sm rounded-lg hover:bg-white/[0.08] transition-all flex items-center gap-2"
-                        >
-                            <GithubLogo size={16} />
-                            GitHub
-                        </MotionA>
-                        <MotionA
                             href={profileData.linkedin}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -108,6 +159,38 @@ const Contact = () => {
                         </MotionA>
                     </MotionDiv>
                 </div>
+
+                {/* FAQ Section — AEO */}
+                <MotionDiv
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                >
+                    <div className="inline-flex items-center gap-3 px-4 py-2 rounded-lg border border-accent-purple/15 bg-accent-purple/5 font-mono text-xs mb-6 w-fit">
+                        <span className="w-2 h-2 rounded-full bg-accent-purple animate-pulse"></span>
+                        <span className="text-accent-purple">~/$</span>
+                        <span className="text-text-tertiary">man haikal | grep -A99 FAQ</span>
+                    </div>
+
+                    <h2 className="text-xl md:text-2xl font-bold tracking-tight text-foreground mb-2">
+                        Frequently Asked <span className="text-gradient-purple">Questions</span>
+                    </h2>
+                    <p className="text-text-tertiary text-xs font-mono mb-6">
+                        Quick answers about my expertise, availability, and background.
+                    </p>
+
+                    <div className="space-y-2 max-w-[600px]">
+                        {faqs.map((faq, idx) => (
+                            <AccordionItem
+                                key={idx}
+                                faq={faq}
+                                idx={idx}
+                                open={openIdx === idx}
+                                onToggle={() => setOpenIdx(openIdx === idx ? null : idx)}
+                            />
+                        ))}
+                    </div>
+                </MotionDiv>
             </div>
         </section>
     );
