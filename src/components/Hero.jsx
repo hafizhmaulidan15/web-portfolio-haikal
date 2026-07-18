@@ -119,13 +119,6 @@ const Hero = () => {
                                     <TerminalWindow size={16} weight="bold" />
                                     connect --now
                                 </Link>
-                                <Link
-                                    to="/projects"
-                                    className="px-6 py-3.5 bg-interactive-button border border-white/[0.1] text-foreground font-sans text-sm rounded-lg hover:bg-white/[0.08] transition-all flex items-center gap-2"
-                                >
-                                    view projects
-                                    <ArrowUpRight size={14} weight="bold" />
-                                </Link>
                                 <a
                                     href={profileData.credlyUrl}
                                     target="_blank"
