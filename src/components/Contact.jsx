@@ -116,7 +116,7 @@ const Contact = () => {
                             <div className="p-4 space-y-0 font-mono text-xs">
                                 {[
                                     { label: 'Email', value: profileData.email, href: `mailto:${profileData.email}`, color: 'text-accent-green' },
-                                    { label: 'Phone', value: profileData.phone, color: 'text-text-secondary' },
+                                    { label: 'Certs', value: '15+ Credly badges', color: 'text-primary' },
                                     { label: 'Location', value: profileData.location, color: 'text-text-secondary' },
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex items-center gap-3 py-2.5 border-b border-white/[0.04] last:border-0">

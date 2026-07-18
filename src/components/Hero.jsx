@@ -77,7 +77,7 @@ const Hero = () => {
                                 <div className="flex items-center gap-4 md:gap-5 text-sm md:text-base font-mono text-text-tertiary flex-wrap">
                                     <span className="flex items-center gap-1.5">
                                         <MapPin size={16} weight="bold" className="text-primary" />
-                                        Bogor, Indonesia
+                                        {profileData.location}
                                     </span>
                                     <span className="w-1 h-1 rounded-full bg-text-muted"></span>
                                     <span className="flex items-center gap-1.5">

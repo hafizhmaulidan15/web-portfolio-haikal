@@ -8,7 +8,7 @@ const About = () => {
     const systemInfo = [
         { label: 'Name', value: 'Muhammad Haikal Ramadhika' },
         { label: 'Role', value: 'NOC Engineer' },
-        { label: 'Location', value: 'Bogor, Indonesia' },
+        { label: 'Location', value: profileData.location },
         { label: 'Email', value: profileData.email },
         { label: 'Education', value: 'SMK IDN Boarding School — TKJ' },
         { label: 'Status', value: 'Active · Open to opportunities' },

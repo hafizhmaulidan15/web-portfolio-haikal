@@ -5,8 +5,8 @@ export const profileData = {
   title: "Junior Network Engineer",
   tagline: "Cisco, MikroTik & Fortinet Certified | CCNA, MTCRE, FCA",
   email: "mhaikramadhika5@gmail.com",
-  phone: "+62 877-8968-0231",
-  location: "Bogor, Indonesia",
+  phone: null,
+  location: "Bandung, Indonesia",
   linkedin: "https://linkedin.com/in/muhammad-haikal-ramadhika-5749b22a6",
   github: "https://github.com/haikal-ramadhika",
   credlyUrl: "https://www.credly.com/users/m-haikal-ramadhika",
@@ -41,7 +41,7 @@ export const infoCards = [
   {
     icon: 'map',
     title: 'Location',
-    description: 'Bogor, Indonesia',
+    description: 'Bandung, Indonesia',
     color: 'text-primary',
     bg: 'bg-primary/10',
     glow: 'border-glow-top-cyan'
