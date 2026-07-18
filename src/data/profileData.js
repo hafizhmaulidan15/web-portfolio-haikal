@@ -462,26 +462,6 @@ export const projects = [
     skills: ['AWS', 'Cloud', 'EC2', 'VPC', 'IAM', 'S3', 'Technical Writing'],
     color: 'text-accent-purple',
   },
-  {
-    id: 6,
-    title: 'Enterprise Multi-Protocol Network Lab: Cisco',
-    period: 'Jan 2024 - Present',
-    association: 'Self-Project',
-    icon: 'lab',
-    role: 'Network Engineer',
-    roleType: 'individual',
-    category: 'project',
-    description: 'Multi-protocol enterprise network lab built on Cisco infrastructure. Performed end-to-end troubleshooting and documented the implementation of routing protocols, switching, and security configurations.',
-    responsibilities: [
-      'Designed and built multi-protocol network topology using Cisco routers and switches.',
-      'Configured OSPF, EIGRP, BGP, and redistribution between protocols.',
-      'Implemented VLANs, trunking, STP, EtherChannel, and inter-VLAN routing.',
-      'Performed end-to-end troubleshooting and documented the full implementation.',
-    ],
-    impact: 'Comprehensive enterprise networking lab demonstrating multi-vendor protocol integration and troubleshooting methodology.',
-    skills: ['Cisco', 'OSPF', 'EIGRP', 'BGP', 'VLAN', 'STP', 'EtherChannel', 'Troubleshooting'],
-    color: 'text-primary',
-  },
 ];
 
 export const certifications = [
