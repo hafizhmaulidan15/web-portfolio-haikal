@@ -9,6 +9,7 @@ export const profileData = {
   location: "Bogor, Indonesia",
   linkedin: "https://linkedin.com/in/muhammad-haikal-ramadhika-5749b22a6",
   github: "https://github.com/haikal-ramadhika",
+  credlyUrl: "https://www.credly.com/users/m-haikal-ramadhika",
   about: `Graduate of SMK IDN Boarding School, Junior Network Engineer with hands-on experience in network design, security, and protocol implementation. Holds CCNA, MTCRE, MTCNA, DCAIE, and Fortinet certifications. Active as a trainer and technical book author, with competition experience at national and international levels.`,
 };
 

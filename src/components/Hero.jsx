@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 
 const MotionDiv = m.div;
 import { Network, WifiHigh, BookOpen, Certificate, ArrowUpRight, TerminalWindow, MapPin, Envelope } from '@phosphor-icons/react';
+import { profileData } from '../data/profileData';
 
 const typewriterText = [
     "> Initializing network engineer profile...",
@@ -89,23 +90,34 @@ const Hero = () => {
 
                         {/* Stats Row */}
                         <MotionContainer delay={0.3}>
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4">
                                 {[
                                     { label: 'CERTIFICATIONS', value: '7+', color: 'text-primary', icon: Certificate, desc: 'Cisco, MikroTik, Fortinet' },
                                     { label: 'BOOKS PUBLISHED', value: '5+', color: 'text-accent-green', icon: BookOpen, desc: 'CCNA, MTCNA, AWS' },
                                     { label: 'STUDENTS TRAINED', value: '70+', color: 'text-accent-purple', icon: WifiHigh, desc: 'Indonesia & Malaysia' },
+                                    { label: 'CREDLY BADGES', value: '15+', color: 'text-accent-cyan', icon: Certificate, desc: 'CCNA, MTCRE, FCA, NSE & more' },
                                     { label: 'YEARS ACTIVE', value: '3+', color: 'text-accent-amber', icon: TerminalWindow, desc: 'NOC & Training' },
                                 ].map((stat, idx) => (
-                                    <div key={idx} className="p-4 md:p-5 rounded-xl border border-white/[0.06] bg-surface/40 backdrop-blur-sm text-center group hover:border-primary/20 transition-all">
+                                    <div key={idx} className="p-3 md:p-5 rounded-xl border border-white/[0.06] bg-surface/40 backdrop-blur-sm text-center group hover:border-primary/20 transition-all">
                                         <div className={`${stat.color} mb-2 flex justify-center`}>
-                                            <stat.icon size={22} weight="duotone" />
+                                            <stat.icon size={20} weight="duotone" />
                                         </div>
-                                        <div className={`text-2xl md:text-3xl font-bold font-mono tracking-tight ${stat.color}`}>{stat.value}</div>
-                                        <div className="text-[10px] md:text-xs font-mono text-text-tertiary uppercase tracking-wider mt-1">{stat.label}</div>
-                                        <div className="text-[9px] md:text-[10px] font-mono text-text-muted mt-0.5">{stat.desc}</div>
+                                        <div className={`text-xl md:text-3xl font-bold font-mono tracking-tight ${stat.color}`}>{stat.value}</div>
+                                        <div className="text-[9px] md:text-xs font-mono text-text-tertiary uppercase tracking-wider mt-1">{stat.label}</div>
+                                        <div className="text-[8px] md:text-[10px] font-mono text-text-muted mt-0.5">{stat.desc}</div>
                                     </div>
                                 ))}
                             </div>
+                            <a
+                                href={profileData.credlyUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 text-[10px] font-mono text-text-tertiary hover:text-primary transition-colors mt-3"
+                            >
+                                <Certificate size={10} weight="bold" />
+                                Verify all certifications on Credly
+                                <ArrowUpRight size={10} weight="bold" />
+                            </a>
                         </MotionContainer>
 
                         {/* CTA */}

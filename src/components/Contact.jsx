@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion as m, AnimatePresence } from 'framer-motion';
-import { Envelope, GithubLogo, LinkedinLogo, MapPin, TerminalWindow, Phone, CaretDown } from '@phosphor-icons/react';
+import { Envelope, GithubLogo, LinkedinLogo, MapPin, TerminalWindow, Phone, CaretDown, Certificate } from '@phosphor-icons/react';
 import { profileData } from '../data/profileData';
 import { cn } from '../lib/utils';
 
@@ -156,6 +156,16 @@ const Contact = () => {
                         >
                             <LinkedinLogo size={16} />
                             LinkedIn
+                        </MotionA>
+                        <MotionA
+                            href={profileData.credlyUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.03 }}
+                            className="px-5 py-3 bg-interactive-button border border-white/[0.1] text-foreground font-sans text-sm rounded-lg hover:bg-white/[0.08] transition-all flex items-center gap-2"
+                        >
+                            <Certificate size={16} />
+                            Credly
                         </MotionA>
                     </MotionDiv>
                 </div>
