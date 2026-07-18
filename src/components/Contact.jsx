@@ -165,8 +165,9 @@ const Contact = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
+                    className="text-center"
                 >
-                    <div className="inline-flex items-center gap-3 px-4 py-2 rounded-lg border border-accent-purple/15 bg-accent-purple/5 font-mono text-xs mb-6 w-fit">
+                    <div className="inline-flex items-center gap-3 px-4 py-2 rounded-lg border border-accent-purple/15 bg-accent-purple/5 font-mono text-xs mb-6 w-fit mx-auto">
                         <span className="w-2 h-2 rounded-full bg-accent-purple animate-pulse"></span>
                         <span className="text-accent-purple">~/$</span>
                         <span className="text-text-tertiary">man haikal | grep -A99 FAQ</span>
@@ -179,7 +180,7 @@ const Contact = () => {
                         Quick answers about my expertise, availability, and background.
                     </p>
 
-                    <div className="space-y-2 max-w-[600px]">
+                    <div className="space-y-2 max-w-[600px] mx-auto text-left">
                         {faqs.map((faq, idx) => (
                             <AccordionItem
                                 key={idx}
