@@ -7,7 +7,7 @@ export const profileData = {
   email: "mhaikramadhika5@gmail.com",
   phone: null,
   location: "Bandung, Indonesia",
-  linkedin: "https://linkedin.com/in/muhammad-haikal-ramadhika-5749b22a6",
+  linkedin: "https://www.linkedin.com/in/muhammad-haikal-ramadhika-430a892a4",
   github: "https://github.com/haikal-ramadhika",
   credlyUrl: "https://www.credly.com/users/m-haikal-ramadhika",
   about: `Graduate of SMK IDN Boarding School, Junior Network Engineer with hands-on experience in network design, security, and protocol implementation. Holds CCNA, MTCRE, MTCNA, DCAIE, and Fortinet certifications. Active as a trainer and technical book author, with competition experience at national and international levels.`,
@@ -53,7 +53,7 @@ export const achievements = [
   { text: 'MTCRE Certified', icon: 'router', color: 'text-accent-green' },
   { text: 'Technical Author', icon: 'book', color: 'text-accent-purple' },
   { text: 'APJC NetAcad Riders 2024', icon: 'training', color: 'text-accent-amber' },
-  { text: 'FCA Certified', icon: 'shield', color: 'text-primary' },
+  { text: 'FCA & NSE 3 Certified', icon: 'shield', color: 'text-primary' },
 ];
 
 export const experiences = [
@@ -375,7 +375,7 @@ export const projects = [
     role: 'Author',
     roleType: 'individual',
     category: 'books',
-    description: 'A 400-page comprehensive book covering networking fundamentals and Cisco product introductions. Designed for CCNA certification aspirants.',
+    description: 'A 600-page comprehensive book covering networking fundamentals and Cisco product introductions. Designed for CCNA certification aspirants.',
     responsibilities: [
       'Authored comprehensive CCNA study material covering all exam topics.',
       'Designed practical lab scenarios for hands-on learning.',
@@ -468,7 +468,7 @@ export const projects = [
     period: 'Jan 2024 - Present',
     association: 'Self-Project',
     icon: 'lab',
-    role: 'Network Engineer',
+    role: 'Network Topology Labs',
     roleType: 'individual',
     category: 'project',
     description: 'Multi-protocol enterprise network lab built on Cisco infrastructure. Performed end-to-end troubleshooting and documented the implementation of routing protocols, switching, and security configurations.',
